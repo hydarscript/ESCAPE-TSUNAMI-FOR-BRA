@@ -6,7 +6,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jen
 local Window = OrionLib:MakeWindow({
     Name = "😈 VEX BLOX PREMIUM PANEL 😈",
     HidePremium = false,
-    SaveConfig = true,
+    SaveConfig = false,
     ConfigFolder = "BETA TEST"
 })
 -- ============================================
@@ -14,7 +14,7 @@ local Window = OrionLib:MakeWindow({
 -- ============================================
 OrionLib:MakeNotification({
     Name = "🌈 CHUDMARANI",
-    Content = "🎮 HACK HAS BEEN ACTIVATED - RAINBOW MODE ON!",
+    Content = "🎮 HACK HAS BEEN ACTIVATED",
     Image = "rbxassetid://4483345998",
     Time = 5
 })
