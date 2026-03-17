@@ -51,7 +51,7 @@ end
 
 --// TOGGLE
 Tab:AddToggle({
-	Name = "Area Noti Remove",
+	Name = "Area Noti <REMOVE>",
 	Default = false,
 	Callback = function(Value)
         if Value then
@@ -78,7 +78,7 @@ end
 
 -- Togglew
 Tab:AddToggle({
-	Name = "REMOVE Noti all",
+	Name = "Display Noti <REMOVE>",
 	Default = false,
 	Callback = function(Value)
         enabled = Value
