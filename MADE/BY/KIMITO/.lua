@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "KIMITO HACKER", HidePremium = false, SaveConfig = true, ConfigFolder = "BETA TEST"})
+local Window = OrionLib:MakeWindow({Name = "VEX BLOX PREMIUME PANEL", HidePremium = false, SaveConfig = true, ConfigFolder = "BETA TEST"})
 
 local Tab = Window:MakeTab({
 	Name = "HACKING",
