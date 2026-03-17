@@ -18,7 +18,7 @@ end
 --           MAKE ORION WINDOW
 -- ============================================
 local Window = OrionLib:MakeWindow({
-    Name = "💀 VEX BLOX PREMIUM PANEL 💀",
+    Name = "😈 VEX BLOX PREMIUM PANEL 😈",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "BETA TEST"
@@ -102,7 +102,7 @@ OrionLib:MakeNotification({
 --               HACKING TAB
 -- ============================================
 local Tab = Window:MakeTab({
-    Name = "🔥 HACKING",
+    Name = "💀 HACKING",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
