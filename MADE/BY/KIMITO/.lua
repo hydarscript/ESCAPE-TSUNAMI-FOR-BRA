@@ -1,31 +1,30 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
--- ============================================
---           MAKE ORION WINDOW
--- ============================================
-local Window = OrionLib:MakeWindow({
-    Name = "😈 VEX BLOX PREMIUM PANEL 😈",
-    HidePremium = false,
-    SaveConfig = false,
-    ConfigFolder = "BETA TEST"
-})
--- ============================================
---           NOTIFICATION ON LOAD
--- ============================================
-OrionLib:MakeNotification({
-    Name = "🌈 CHUDMARANI",
-    Content = "🎮 HACK HAS BEEN ACTIVATED",
-    Image = "rbxassetid://4483345998",
-    Time = 5
-})
+local Window = WindUI:CreateWindow({
+    Title = "☠VEX BLOX PREMIUM PANEL☠",
+    Icon = "monitor-cog", -- lucide icon
+    Author = "by KIMITO",
+    Folder = "MySuperHub",
+    
+    -- ↓ This all is Optional. You can remove it.
+    Size = UDim2.fromOffset(580, 460),
+    MinSize = Vector2.new(560, 350),
+    MaxSize = Vector2.new(850, 560),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 200,
+    BackgroundImageTransparency = 0.42,
+    HideSearchBar = true,
+    ScrollBarEnabled = false,
+})   
 
--- ============================================
---               HACKING TAB
--- ============================================
-local Tab = Window:MakeTab({
-    Name = "💀 HACKING",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
+Window:SetToggleKey(Enum.KeyCode.H)
+
+local Tab = Window:Tab({
+    Title = "HACKING",
+    Icon = "skull", -- optional
+    Locked = false,
 })
 
 -- ============================================
@@ -58,11 +57,14 @@ local function stopArea()
     end
 end
 
-Tab:AddToggle({
-    Name = "🚫 Area Noti <REMOVE>",
-    Default = false,
-    Callback = function(Value)
-        if Value then
+local Toggle = Tab:Toggle({
+    Title = "Area Noti Remove",
+    Desc = "Removes area notification",
+    Icon = "ban",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state)
+        if state then
             startArea()
         else
             stopArea()
@@ -71,8 +73,9 @@ Tab:AddToggle({
 })
 
 -- ============================================
---       DISPLAY NOTI REMOVE TOGGLE
+--         DISPLAY NOTI REMOVE TOGGLE
 -- ============================================
+
 local displayEnabled = false
 
 local function removeWaveNoti()
@@ -84,14 +87,16 @@ local function removeWaveNoti()
     end)
 end
 
-Tab:AddToggle({
-    Name = "🚫 Display Noti <REMOVE>",
-    Default = false,
-    Callback = function(Value)
-        displayEnabled = Value
+local Toggle = Tab:Toggle({
+    Title = "Display Noti Remove",
+    Desc = "Removes display notification",
+    Icon = "ban",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state)
+        displayEnabled = state
         if displayEnabled then
             removeWaveNoti()
         end
     end
 })
-
